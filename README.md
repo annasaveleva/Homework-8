@@ -15,7 +15,7 @@
 3.	_
 4.	Анна С. (annasaveleva)
 5.	Маргарита Ф. (f-morgan)
-6.	_
+6.	Анастасия Ш. (Asharpilova)
 7.	Юлия Ш. (yulschew4uck)
 
 
