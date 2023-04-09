@@ -8,7 +8,7 @@
 4.	_
 5.	Маргарита Ф. (f-morgan)
 6.	_
-7.	Шевчук Ю. (yulia.schew4uck)
+7.	Шевчук Ю. (yulschew4uck)
 
 
 
