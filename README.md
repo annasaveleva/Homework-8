@@ -12,7 +12,7 @@
 **Список участников команды:**
 1.	Екатерина  П. (kat-1003)
 2.	Елена П. (ProkhorovaElena)
-3.  Ингрида С. (Ingridik177)
+3.  Ингрида С. (Ingridik177) 
 4.	Анна С. (annasaveleva)
 5.	Маргарита Ф. (f-morgan)
 6.	Анастасия Ш. (Asharpilova)
