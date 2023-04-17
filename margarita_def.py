@@ -33,11 +33,13 @@ def do_margarita_code():
                                    "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
                                    "embarked": embarked}
                     titanic[name[1: -1]] = person_info
+                    st.text(titanic)
                 else:
                     person_info = {"passengerId": passenger_id, "survived": save, "pclass": p_class, "sex": sex,
                                    "age": age,
                                    "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
                                    "embarked": embarked}
                     titanic[name[1: -1]] = person_info
+                    st.text(titanic)
     data_file.close()
     st.divider()
