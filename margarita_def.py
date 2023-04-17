@@ -9,13 +9,15 @@ def do_margarita_code():
 
     save = "1" if st.checkbox("Выжил") else "0"
 
+    titanic_save = {}
+    titanic_not_save = {}
+
     with open("data.csv") as data_file:
         next(data_file)
         for line in data_file:
-            titanic_save = {}
-            titanic_not_save = {}
 
             lst = line.split(',')
+
             passenger_id = lst[0]
             survived = lst[1]
             p_class = lst[2]
@@ -28,8 +30,9 @@ def do_margarita_code():
             fare = lst[10]
             cabin = lst[11]
             embarked = lst[12]
+
             if fare == '0':
-                if survived == save:
+                if survived == "1":
                     person_info_save = {"passengerId": passenger_id, "survived": survived, "pclass": p_class, "sex": sex,
                                    "age": age,
                                    "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
@@ -43,5 +46,9 @@ def do_margarita_code():
                                    "embarked": embarked}
                     titanic_not_save[name[1: -1]] = person_info_died
                     st.text(titanic_not_save)
+    if save == "1":
+        st.text(titanic_save)
+    else:
+        st.text(titanic_not_save)
     data_file.close()
     st.divider()
