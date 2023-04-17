@@ -31,24 +31,24 @@ def do_margarita_code():
             cabin = lst[11]
             embarked = lst[12]
 
-            if fare == '0':
-                if survived == "1":
-                    person_info_save = {"passengerId": passenger_id, "survived": survived, "pclass": p_class, "sex": sex,
-                                   "age": age,
-                                   "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
-                                   "embarked": embarked}
-                    titanic_save[name[1: -1]] = person_info_save
-                    st.text(titanic_save)
-                else:
-                    person_info_died = {"passengerId": passenger_id, "survived": survived, "pclass": p_class, "sex": sex,
-                                   "age": age,
-                                   "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
-                                   "embarked": embarked}
-                    titanic_not_save[name[1: -1]] = person_info_died
-                    st.text(titanic_not_save)
+            if fare == '0' and survived == "1":
+                person_info_save = {"passengerId": passenger_id, "survived": survived, "pclass": p_class, "sex": sex,
+                               "age": age,
+                               "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
+                               "embarked": embarked}
+                titanic_save[name[1: -1]] = person_info_save
+
+            elif fare == '0' and survived == "1":
+                person_info_died = {"passengerId": passenger_id, "survived": survived, "pclass": p_class, "sex": sex,
+                               "age": age,
+                               "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
+                               "embarked": embarked}
+                titanic_not_save[name[1: -1]] = person_info_died
+    data_file.close()
+
     if save == "1":
         st.text(titanic_save)
     else:
         st.text(titanic_not_save)
-    data_file.close()
+
     st.divider()
