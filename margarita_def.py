@@ -33,22 +33,20 @@ def do_margarita_code():
 
             if fare == '0' and survived == "1":
                 person_info_save = {"passengerId": passenger_id, "survived": survived, "pclass": p_class, "sex": sex,
-                               "age": age,
-                               "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
+                               "age": age, "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
                                "embarked": embarked}
                 titanic_save[name[1: -1]] = person_info_save
 
             elif fare == '0' and survived == "1":
                 person_info_died = {"passengerId": passenger_id, "survived": survived, "pclass": p_class, "sex": sex,
-                               "age": age,
-                               "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
+                               "age": age, "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
                                "embarked": embarked}
                 titanic_not_save[name[1: -1]] = person_info_died
     data_file.close()
 
     if save == "1":
-        st.text(titanic_save)
+        st.dataframe(titanic_save)
     else:
-        st.text(titanic_not_save)
+        st.dataframe(titanic_not_save)
 
     st.divider()
