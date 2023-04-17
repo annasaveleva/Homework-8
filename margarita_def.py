@@ -30,14 +30,14 @@ def do_margarita_code():
             embarked = lst[12]
             if fare == '0':
                 if survived == save:
-                    person_info_save = {"passengerId": passenger_id, "survived": save, "pclass": p_class, "sex": sex,
+                    person_info_save = {"passengerId": passenger_id, "survived": survived, "pclass": p_class, "sex": sex,
                                    "age": age,
                                    "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
                                    "embarked": embarked}
                     titanic_save[name[1: -1]] = person_info_save
                     st.text(titanic_save)
                 else:
-                    person_info_died = {"passengerId": passenger_id, "survived": save, "pclass": p_class, "sex": sex,
+                    person_info_died = {"passengerId": passenger_id, "survived": survived, "pclass": p_class, "sex": sex,
                                    "age": age,
                                    "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
                                    "embarked": embarked}
