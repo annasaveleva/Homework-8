@@ -12,13 +12,32 @@ def do_margarita_code():
     with open("data.csv") as data_file:
         next(data_file)
         for line in data_file:
+            titanic = {}
             lst = line.split(',')
+            passenger_id = lst[0]
             survived = lst[1]
+            p_class = lst[2]
+            name = lst[3] + lst[4]
+            sex = lst[5]
+            age = lst[6]
+            sib_sp = lst[7]
+            parch = lst[8]
+            ticket = lst[9]
             fare = lst[10]
+            cabin = lst[11]
+            embarked = lst[12]
             if fare == '0':
                 if survived == save:
-                    st.text(line.rstrip())
-                if survived == save:
-                    st.text(line.rstrip())
+                    person_info = {"passengerId": passenger_id, "survived": save, "pclass": p_class, "sex": sex,
+                                   "age": age,
+                                   "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
+                                   "embarked": embarked}
+                    titanic[name[1: -1]] = person_info
+                else:
+                    person_info = {"passengerId": passenger_id, "survived": save, "pclass": p_class, "sex": sex,
+                                   "age": age,
+                                   "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
+                                   "embarked": embarked}
+                    titanic[name[1: -1]] = person_info
     data_file.close()
     st.divider()
