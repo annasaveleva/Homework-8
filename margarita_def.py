@@ -44,8 +44,8 @@ def do_margarita_code():
     data_file.close()
 
     if save == "1":
-        st.text(titanic_save)
+        st.dataframe(titanic_save)
     else:
-        st.text(titanic_not_save)
+        st.dataframe(titanic_not_save)
 
     st.divider()
