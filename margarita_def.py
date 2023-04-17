@@ -12,7 +12,9 @@ def do_margarita_code():
     with open("data.csv") as data_file:
         next(data_file)
         for line in data_file:
-            titanic = {}
+            titanic_save = {}
+            titanic_not_save = {}
+
             lst = line.split(',')
             passenger_id = lst[0]
             survived = lst[1]
@@ -28,18 +30,18 @@ def do_margarita_code():
             embarked = lst[12]
             if fare == '0':
                 if survived == save:
-                    person_info = {"passengerId": passenger_id, "survived": save, "pclass": p_class, "sex": sex,
+                    person_info_save = {"passengerId": passenger_id, "survived": save, "pclass": p_class, "sex": sex,
                                    "age": age,
                                    "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
                                    "embarked": embarked}
-                    titanic[name[1: -1]] = person_info
-                    st.text(titanic)
+                    titanic_save[name[1: -1]] = person_info_save
+                    st.text(titanic_save)
                 else:
-                    person_info = {"passengerId": passenger_id, "survived": save, "pclass": p_class, "sex": sex,
+                    person_info_died = {"passengerId": passenger_id, "survived": save, "pclass": p_class, "sex": sex,
                                    "age": age,
                                    "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
                                    "embarked": embarked}
-                    titanic[name[1: -1]] = person_info
-                    st.text(titanic)
+                    titanic_not_save[name[1: -1]] = person_info_died
+                    st.text(titanic_not_save)
     data_file.close()
     st.divider()
