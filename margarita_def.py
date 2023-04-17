@@ -5,7 +5,6 @@ def do_margarita_code():
     st.subheader("Задание")
     st.info("Вывести данные пассажиров с билетом нулевой стоимости, выбрав спасен/нет")
     st.subheader("Решение")
-    st.text("И тут такая выводится программа Риты")
 
     save = "1" if st.checkbox("Выжил") else "0"
 
@@ -32,16 +31,14 @@ def do_margarita_code():
             embarked = lst[12]
 
             if fare == '0' and survived == "1":
-                person_info_save = {"passengerId": passenger_id, "survived": survived, "pclass": p_class, "sex": sex,
+                titanic_save = {"name": name[1: -1], "passengerId": passenger_id, "survived": survived, "pclass": p_class, "sex": sex,
                                "age": age, "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
                                "embarked": embarked}
-                titanic_save[name[1: -1]] = person_info_save
 
             elif fare == '0' and survived == "0":
-                person_info_died = {"passengerId": passenger_id, "survived": survived, "pclass": p_class, "sex": sex,
+                titanic_not_save = {"name": name[1: -1], "survived": survived, "pclass": p_class, "sex": sex,
                                "age": age, "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
                                "embarked": embarked}
-                titanic_not_save[name[1: -1]] = person_info_died
     data_file.close()
 
     if save == "1":
