@@ -37,7 +37,7 @@ def do_margarita_code():
                                "embarked": embarked}
                 titanic_save[name[1: -1]] = person_info_save
 
-            elif fare == '0' and survived == "1":
+            elif fare == '0' and survived == "0":
                 person_info_died = {"passengerId": passenger_id, "survived": survived, "pclass": p_class, "sex": sex,
                                "age": age, "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
                                "embarked": embarked}
