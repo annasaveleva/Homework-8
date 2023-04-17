@@ -34,6 +34,7 @@ def do_margarita_code():
                 person_info_save = {"name": name[1: -1], "passengerId": passenger_id, "survived": survived, "pclass": p_class, "sex": sex,
                                "age": age, "sibSp": sib_sp, "parch": parch, "ticket": ticket, "fare": fare, "cabin": cabin,
                                "embarked": embarked}
+                titanic_save = {person_info_save}
 
             elif fare == '0' and survived == "0":
                 person_info_died = {"passengerId": passenger_id, "survived": survived, "pclass": p_class, "sex": sex,
@@ -43,7 +44,7 @@ def do_margarita_code():
     data_file.close()
 
     if save == "1":
-        st.dataframe(person_info_save)
+        st.dataframe(titanic_save)
     else:
         st.dataframe(titanic_not_save)
 
