@@ -32,10 +32,10 @@ def do_elena_code():
                 else:
                     count_old +=1
     if saved and choise == "моложе 30":
-        st.success(f"Ответ: {round((count_favorites_young/count_all)*100)}")
+        st.success(f"Ответ: {round((count_favorites_young/count_all)*100)} %")
     elif not saved and choise == "моложе 30":
-        st.success(f"Ответ: {round((count_young/count_all)*100)}")
+        st.success(f"Ответ: {round((count_young/count_all)*100)} %")
     if saved and choise == "старше 60":
-        st.success(f"Ответ: {round((count_favorites_old/count_all)*100)}")
+        st.success(f"Ответ: {round((count_favorites_old/count_all)*100)} %")
     elif not saved and choise == "старше 60":
-        st.success(f"Ответ: {round((count_old/count_all)*100)}")
+        st.success(f"Ответ: {round((count_old/count_all)*100)} %")
