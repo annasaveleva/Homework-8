@@ -24,7 +24,7 @@ def do_kate_code():
                 else:
                     count_died_male += 1
             else:
-                if save == '1':
+                if save == '0':
                     count_save_female += 1
                 else:
                     count_died_female += 1
