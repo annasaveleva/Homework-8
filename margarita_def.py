@@ -11,6 +11,7 @@ def do_dataframe(dataframe, save):
         return "There is no items"
     return df
 
+
 def do_margarita_code():
     st.subheader("Задание")
     st.info("Вывести данные пассажиров с билетом нулевой стоимости, выбрав спасен/нет")
