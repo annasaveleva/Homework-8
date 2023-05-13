@@ -19,5 +19,3 @@ def do_margarita_code():
     save = True if st.checkbox("Выжил") else False
     df = pd.read_csv("data.csv")
     st.write(do_dataframe(df, save).reset_index(drop=True))
-
-do_margarita_code()
