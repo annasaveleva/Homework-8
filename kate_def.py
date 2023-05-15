@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 
 
-
 def process(df, save):
     df = df.loc[(df['Survived'] == save)].groupby(['Sex'])['Survived'].count().reset_index(name='count')
     male, female = df['count'].values[1], df['count'].values[0]
