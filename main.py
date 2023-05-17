@@ -39,4 +39,3 @@ elif member == YULIA:
     yulia_def.do_yulia_code()
 else:
     print("Девушки возражают - выбран неверный вариант!")
-
