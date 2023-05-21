@@ -21,10 +21,3 @@ def do_anna_code():
     count_male, count_female = count_men_women_of_selected_class(df, selected_class)
 
     st.text(f'Количество мужчин и женщин: Class {selected_class}. men: {count_male}, women: {count_female}')
-
-
-do_anna_code()
-
-
-
-
