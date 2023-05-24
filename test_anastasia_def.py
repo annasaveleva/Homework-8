@@ -1,5 +1,6 @@
 from anastasia_def import count_middle_price
 
+
 def test_count_middle_price():
     data = [' ,Survived, , , , ,Fare',
             ' ,1, , , , ,1',

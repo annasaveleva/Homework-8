@@ -1,12 +1,14 @@
 import streamlit as st
 import csv
 
+
 def isfloat(value):
     try:
         float(value)
         return True
     except ValueError:
         return False
+
 
 def count_middle_price(csv_file):
     sur_price = 0
@@ -52,5 +54,3 @@ def do_anastasia_code():
         st.write("Средняя стоимость билета для спасенных: {:.2f}".format(sur_midl_price))
     elif selected_variable == "Не спасен":
         st.write("Средняя стоимость билета для не спасенных: {:.2f}".format(no_sur_midl_price))
-
-do_anastasia_code()
